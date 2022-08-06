@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+main {
+    padding: 36px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    background: white;
+    color: black;
+    padding: 20px;
+    box-shadow: 0px 2px 4px black;
+    border-bottom: 1px solid black;
+}
+.header--dark{
+    background: rgb(29, 28, 28);
+    box-shadow: 0px 2px 4px white;
+    border-bottom: 1px solid white;
+}
+.header--image {
+    height: 100%;
+    margin-right: 6px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header--title {
+    font-size: 1.25rem;
+    margin-right: auto;
+}
+.header--title--dark{
+    color: white;
+}
+.day--night{
+    cursor: pointer;
+    height: 120%;
+}
+.form {
+    display: grid;
+    font-size: 20px;
+    grid-template: 60px 60px / 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 17px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+.form--dark{
+    color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form--input {
+    font-family: "Karla", sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    text-indent: 5px;
+    font-weight: bold;
+    box-shadow: 0px 2px 4px grey;
+}
+.form--button {
+    grid-column: 1 / -1;
+    height: 100px;
+    font-size: 24px;
+    font-family: "Karla", sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    background: linear-gradient(21deg, #dd03e4, #5611ec);
+    color: white;
+    border: 1px solid rgb(29, 28, 28);
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgb(29, 28, 28);
+}
+.form--button--dark{
+    box-shadow: 0px 2px 4px grey;
+}
+.newWord{
+    margin: auto;
+    font-family: "Karla", sans-serif;
+    font-size: 70px;
+    text-align: center;
+    color: black;
+}
+.newWord--dark{
+    color: white;
+}
+.newWord::first-letter{
+    text-transform: uppercase;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (max-width:700px) {
+    .form{
+        grid-template: 40px 40px 40px 40px/ 1fr;
+        gap: 50px;
+    }
+    .form--button{
+        height: 50px;
+    }
 }
